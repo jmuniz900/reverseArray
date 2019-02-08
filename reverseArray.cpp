@@ -2,24 +2,21 @@
 
 using namespace std;
 
-int SIZE = 4; //global size
-
-int reverseArray(int &array){
-  int count = SIZE;
-  int arrayR[SIZE];
+void reverseArray(int (&arrayG)[]){
+int count = 3;
 
   while(count > 0){
-    for(int i = 0; i < SIZE; i++){
-      arrayR[i] = array[count];
-    }
+    cout << arrayG[count];
     count--;
   }
-  return arrayR;
 }
 
 int main(){
-  int array[SIZE] = {1, 2, 3, 4};
+  int size = 4;
+  int arrayT[size] = {1, 2, 3, 4};
 
-  reverseArray(array);
+reverseArray(arrayT);
+
+ return 0;
 }
 //changes
