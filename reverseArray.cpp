@@ -2,21 +2,27 @@
 
 using namespace std;
 
-void reverseArray(int (&arrayG)[]){
-int count = 3;
-
-  while(count > 0){
-    cout << arrayG[count];
-    count--;
-  }
+void reverseArray(int (&thearray)[4], int &thesize){
+  int count = thesize - 1;
+  cout << "After: ";
+for(int i = 0; i < thesize; i++){
+  cout << thearray[count] << " ";
+  count--;
+}
+  cout << endl;
 }
 
 int main(){
-  int size = 4;
-  int arrayT[size] = {1, 2, 3, 4};
+  int sizeOfArray = 4;
+  int myarray[4] = {1, 2, 3, 4};
 
-reverseArray(arrayT);
+  cout << "Before: ";
+  for(int i = 0; i < sizeOfArray; i++){
+    cout << myarray[i] << " ";
+  }
+  cout << endl;
 
- return 0;
+  reverseArray(myarray, sizeOfArray);
+
+  return 0;
 }
-//changes made
